@@ -48,7 +48,7 @@ namespace DDD.Types.Tests
             var obj = new TestValueTypeInt(1);
 
             // Act
-            var result = obj.Equals(null);
+            var result = obj.Equals((object)null);
 
             // Assert
             result.Should().BeFalse();
@@ -75,7 +75,7 @@ namespace DDD.Types.Tests
             var object2 = 1;
 
             // Act
-            var result = object1.Equals(object2);
+            var result = object1.Equals((object)object2);
 
             // Assert
             result.Should().BeFalse();
@@ -89,7 +89,7 @@ namespace DDD.Types.Tests
             var object2 = new TestValueTypeInt(1);
 
             // Act
-            var result = object1.Equals(object2);
+            var result = object1.Equals((object)object2);
 
             // Assert
             result.Should().BeTrue();
@@ -102,7 +102,7 @@ namespace DDD.Types.Tests
             var object1 = new TestValueTypeInt(1);
 
             // Act
-            var result = object1.Equals((TestValueTypeInt)null);
+            var result = object1.Equals(null);
 
             // Assert
             result.Should().BeFalse();
